@@ -610,3 +610,73 @@ body.active {
 .app-card .btn-title { font-weight: var(--fw-600); }
 
 
+/* feet Fetish........ I mean footer section */
+
+.footer {
+  text-align: center;
+  color: var(--alice-blue);
+}
+
+.footer .logo {
+  max-width: max-content;
+  margin-inline: auto;
+  margin-block-end: 30px;
+}
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 30px;
+  margin-block: 54px 50px;
+}
+
+.footer-link {
+  color: var(--white);
+  font-weight: var(--fw-600);
+  padding-block-end: 4px;
+  border-block-end: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.footer-link:is(:hover, :focus) { border-color: var(--ultramarine-blue); }
+
+.social-list-title {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-700);
+  margin-block-end: 24px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-link {
+  background-color: var(--eerie-black-1);
+  color: var(--white);
+  font-size: 18px;
+  padding: 16px;
+  border-radius: var(--radius-circle);
+  transition: var(--transition);
+}
+
+.social-link:is(:hover, :focus) { background-color: var(--ultramarine-blue); }
+
+.footer-bottom {
+  border-block-start: 1px solid var(--eerie-black-2);
+  padding-block: 16px;
+}
+
+.copyright {
+  line-height: 1.3;
+  margin-block-end: 16px;
+}
+
+.footer-bottom-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

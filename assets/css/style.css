@@ -140,8 +140,9 @@ body.active {
   padding-inline: 15px;
 }
 
-
-.container { padding-inline: 15px; }
+.container {
+  padding-inline: 15px;
+}
 
 .h1,
 .h2,
@@ -156,9 +157,13 @@ body.active {
   font-weight: var(--fw-800);
 }
 
-.h2 { font-size: var(--fs-2); }
+.h2 {
+  font-size: var(--fs-2);
+}
 
-.h3 { font-size: var(--fs-5); }
+.h3 {
+  font-size: var(--fs-5);
+}
 
 .btn-group {
   display: flex;
@@ -182,9 +187,13 @@ body.active {
   transition: var(--transition);
 }
 
-.btn-primary:is(:hover, :focus) { background-color: var(--blue-ryb); }
+.btn-primary:is(:hover, :focus) {
+  background-color: var(--blue-ryb);
+}
 
-.w-100 { width: 100%; }
+.w-100 {
+  width: 100%;
+}
 
 .header .btn-group {
   display: none;
@@ -271,7 +280,6 @@ body.active {
   color: var(--ultramarine-blue);
 }
 
-
 .overlay {
   position: fixed;
   top: 0;
@@ -289,4 +297,52 @@ body.active {
   pointer-events: all;
   opacity: 0.75;
   visibility: visible;
+}
+
+.hero {
+  padding-block-start: calc(var(--section-padding) + 50px);
+}
+
+.hero .container {
+  display: grid;
+  gap: 70px;
+}
+
+.hero-text {
+  font-size: var(--fs-4);
+  margin-block: 10px 50px;
+}
+
+.play-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-7);
+  font-family: var(--ff-poppins);
+  font-weight: var(--fw-500);
+  transition: var(--transition);
+}
+
+.play-btn .icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--white);
+  border-radius: var(--radius-circle);
+  transition: var(--transition);
+}
+
+.play-btn .span {
+  color: var(--silver-metallic);
+  transition: var(--transition);
+}
+
+.play-btn:is(:hover, :focus) .span {
+  color: var(--white);
+}
+
+.play-btn:is(:hover, :focus) .icon {
+  background-color: var(--white);
+  color: var(--ultramarine-blue);
 }

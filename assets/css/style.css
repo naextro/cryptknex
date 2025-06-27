@@ -141,6 +141,50 @@ body.active {
 }
 
 
+.container { padding-inline: 15px; }
+
+.h1,
+.h2,
+.h3 {
+  color: var(--white);
+  font-family: var(--ff-poppins);
+  line-height: 1.2;
+}
+
+.h1 {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-800);
+}
+
+.h2 { font-size: var(--fs-2); }
+
+.h3 { font-size: var(--fs-5); }
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  max-width: max-content;
+  padding: var(--padding-y, 13px) 28px;
+  font-family: var(--ff-poppins);
+  font-weight: var(--fw-500);
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--ultramarine-blue);
+  font-size: var(--fs-6);
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.btn-primary:is(:hover, :focus) { background-color: var(--blue-ryb); }
+
+.w-100 { width: 100%; }
 
 .header .btn-group {
   display: none;

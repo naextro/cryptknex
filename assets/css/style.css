@@ -140,7 +140,6 @@ body.active {
   padding-inline: 15px;
 }
 
-.overlay,
 .header .btn-group {
   display: none;
 }
@@ -199,4 +198,49 @@ body.active {
   transition: 0.5s var(--cubic-out);
 }
 
+.navbar-top {
+  margin-block-end: 30px;
+}
 
+.nav-close-btn {
+  background-color: var(--fiery-rose_12);
+  color: var(--fiery-rose);
+  font-size: 20px;
+  padding: 5px;
+  border-radius: var(--radius-circle);
+}
+
+.nav-close-btn ion-icon {
+  --ionicon-stroke-width: 45px;
+}
+
+.navbar-link {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-6);
+  padding: 8px 16px;
+  transition: var(--transition);
+}
+
+.navbar-link:is(:hover, :focus) {
+  color: var(--ultramarine-blue);
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--smokey-black);
+  transition: var(--transition);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.active {
+  pointer-events: all;
+  opacity: 0.75;
+  visibility: visible;
+}

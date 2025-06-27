@@ -542,3 +542,16 @@ body.active {
 .table-data .icon.green {
   color: var(--ocean-green);
 }
+
+
+/* CTA SEC*/
+
+
+.cta .btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-inline: auto;
+  margin-block-start: 30px;
+}

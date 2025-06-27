@@ -259,9 +259,10 @@ body.active {
   box-shadow: var(--shadow);
 }
 
-.header.container {
+.header .container,
+.navbar-top {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -269,6 +270,7 @@ body.active {
   color: var(--white_50);
   font-size: 30px;
   transition: var(--transition);
+  border: none;
 }
 
 .nav-open-btn:is(:hover, :focus) {
@@ -306,6 +308,7 @@ body.active {
   font-size: 20px;
   padding: 5px;
   border-radius: var(--radius-circle);
+  border: none;
 }
 
 .nav-close-btn ion-icon {
@@ -543,9 +546,7 @@ body.active {
   color: var(--ocean-green);
 }
 
-
 /* CTA SEC*/
-
 
 .cta .btn-primary {
   display: flex;
@@ -556,11 +557,11 @@ body.active {
   margin-block-start: 30px;
 }
 
-
-
 /* INSTRUCTION  SEC*/
 
-.instruction .section-text { margin-block-end: 50px; }
+.instruction .section-text {
+  margin-block-end: 50px;
+}
 
 .instruction-card {
   padding: 30px;
@@ -585,7 +586,9 @@ body.active {
   gap: 50px;
 }
 
-.app-card .section-text { margin-block-end: 25px; }
+.app-card .section-text {
+  margin-block-end: 25px;
+}
 
 .app-card .btn-primary {
   display: flex;
@@ -595,9 +598,13 @@ body.active {
   --padding-y: 10px;
 }
 
-.app-card .btn-primary ion-icon { font-size: 25px; }
+.app-card .btn-primary ion-icon {
+  font-size: 25px;
+}
 
-.app-card :is(.btn-text, .btn-title) { font-family: var(--ff-open-sans); }
+.app-card :is(.btn-text, .btn-title) {
+  font-family: var(--ff-open-sans);
+}
 
 .app-card .btn-text {
   font-size: var(--fs-9);
@@ -605,10 +612,13 @@ body.active {
   line-height: 1;
 }
 
-.app-card .btn-primary:is(:hover, :focus) { background-color: transparent; }
+.app-card .btn-primary:is(:hover, :focus) {
+  background-color: transparent;
+}
 
-.app-card .btn-title { font-weight: var(--fw-600); }
-
+.app-card .btn-title {
+  font-weight: var(--fw-600);
+}
 
 /* feet Fetish........ I mean footer section */
 
@@ -640,7 +650,9 @@ body.active {
   transition: var(--transition);
 }
 
-.footer-link:is(:hover, :focus) { border-color: var(--ultramarine-blue); }
+.footer-link:is(:hover, :focus) {
+  border-color: var(--ultramarine-blue);
+}
 
 .social-list-title {
   font-size: var(--fs-3);
@@ -663,7 +675,9 @@ body.active {
   transition: var(--transition);
 }
 
-.social-link:is(:hover, :focus) { background-color: var(--ultramarine-blue); }
+.social-link:is(:hover, :focus) {
+  background-color: var(--ultramarine-blue);
+}
 
 .footer-bottom {
   border-block-start: 1px solid var(--eerie-black-2);
@@ -679,4 +693,154 @@ body.active {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+/* MEDAIAAA ; RESPONSIVENESS ; SHITSHOW*/
+
+@media (min-width: 575px) {
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .app-card .card-banner {
+    max-width: max-content;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header .btn-group {
+    display: flex;
+    margin-inline: auto 30px;
+  }
+
+  .ghost-btn {
+    color: var(--alice-blue);
+    font-size: var(--fs-6);
+    transition: var(--transition);
+  }
+
+  .ghost-btn:is(:hover, :focus) {
+    color: var(--ultramarine-blue);
+  }
+
+  .header .btn-primary {
+    border-radius: var(--radius-5);
+  }
+
+  .stats-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .app-card {
+    padding: 50px;
+  }
+
+  .footer-bottom {
+    padding-block: 26px;
+  }
+
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copyright {
+    margin-block-end: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  :is(.section-title, .section-text).text-center {
+    margin-inline: auto;
+  }
+
+  .section-text.text-center {
+    max-width: 60ch;
+  }
+
+  .section-title.text-center {
+    max-width: 30ch;
+  }
+
+  .hero .container {
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .stats .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .instruction .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .app-card {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .footer-top .container {
+    max-width: 580px;
+  }
+
+  .footer-list {
+    column-gap: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .nav-open-btn,
+  .navbar-top {
+    display: none;
+  }
+
+  .navbar {
+    all: unset;
+    display: block;
+    margin-inline: auto;
+  }
+
+  .navbar-list {
+    display: flex;
+  }
+
+  .navbar-link {
+    font-weight: var(--fw-600);
+  }
+
+  .header .btn-group {
+    margin-inline: 0;
+  }
+
+  .app-card {
+    padding-inline: 80px;
+  }
 }

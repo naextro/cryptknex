@@ -419,14 +419,14 @@ body.active {
   margin-block: 20px 16px;
 }
 
-
-
 .stats .container {
   display: grid;
   gap: 50px;
 }
 
-.stats .section-text:last-of-type { margin-block: 16px; }
+.stats .section-text:last-of-type {
+  margin-block: 16px;
+}
 
 .stats-list {
   display: grid;
@@ -446,4 +446,99 @@ body.active {
 .stats-card .card-text {
   font-size: var(--fs-7);
   color: var(--alice-blue);
+}
+
+/* MARKET SEC*/
+
+.market .section-text {
+  margin-block-end: 24px;
+}
+
+.table-container {
+  overflow-x: auto;
+  padding-block-end: 15px;
+}
+
+.table-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background-color: var(--eerie-black-2);
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: var(--davys-gray);
+}
+
+.table-container::-webkit-scrollbar-button {
+  width: 15px;
+}
+
+.market-table {
+  background-color: var(--eerie-black-2);
+  border-collapse: collapse;
+}
+
+.table-head {
+  background-color: var(--onyx-2);
+}
+
+.table-heading {
+  color: var(--white);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  text-align: left;
+  padding: 16px 30px;
+}
+
+.table-body .table-row:not(:last-child) {
+  border-block-end: 1px dashed var(--davys-gray);
+}
+
+.table-data {
+  padding: 12px 30px;
+}
+
+.table-data.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.table-data.wrapper img {
+  width: 30px;
+}
+
+.table-data .coin-name {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  margin-block-end: 5px;
+}
+
+.table-data .span {
+  font-size: var(--fs-8);
+}
+
+.table-data:not(.wrapper) {
+  vertical-align: top;
+  font-size: var(--fs-7);
+}
+
+.table-data .wrapper-flex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.table-data .icon {
+  font-size: 12px;
+}
+
+.table-data .icon.red {
+  color: var(--fiery-rose);
+}
+
+.table-data .icon.green {
+  color: var(--ocean-green);
 }
